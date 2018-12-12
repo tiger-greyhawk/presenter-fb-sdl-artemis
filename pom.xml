@@ -71,22 +71,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
+<!--                <configuration>
                     <systemPropertyVariables>
                         <propertyName>java.library.path</propertyName>
-                        <buildDirectory>./lib/win</buildDirectory>
+                        <buildDirectory>c:\_src\_java\fb-test\src\main\sdljava\lib</buildDirectory>
                     </systemPropertyVariables>
                 </configuration>
-			</plugin>
-			<plugin>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.6.0</version>
-				<configuration>
-					<systemPropertyVariables>
-						<propertyName>java.library.path</propertyName>
-						<buildDirectory>./lib/win</buildDirectory>
-					</systemPropertyVariables>
-				</configuration>
+-->
 			</plugin>
 		</plugins>
 	</build>
