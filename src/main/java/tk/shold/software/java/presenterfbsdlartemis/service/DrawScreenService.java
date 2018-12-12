@@ -8,6 +8,8 @@ import sdljava.video.SDLSurface;
 import sdljava.video.SDLVideo;
 import tk.shold.software.java.presenterfbsdlartemis.entity.DisplayableSurface;
 
+import javax.annotation.PreDestroy;
+
 @Log
 @Component
 public class DrawScreenService {
@@ -51,5 +53,18 @@ public class DrawScreenService {
             e.printStackTrace();
         }
         return screen;
+    }
+
+    @PreDestroy
+    public void destroySdlObjects()
+    {
+        log.info("try to destroy SDLObjects");
+        try {
+            imageToDraw.freeSurface();
+            SDLMain.quit();
+            log.info("destroy SDLObjects successful");
+        } catch (SDLException e) {
+            e.printStackTrace();
+        }
     }
 }

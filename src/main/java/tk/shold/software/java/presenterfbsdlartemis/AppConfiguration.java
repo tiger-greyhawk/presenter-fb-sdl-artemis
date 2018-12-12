@@ -14,8 +14,9 @@ public class AppConfiguration {
 
     @PostConstruct
     public void init() {
-
     }
+
+
 
     @Bean
     public DisplayableSurface displayableSurface()
